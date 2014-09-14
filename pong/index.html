@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML5 Pong</title>
+    <style type="text/css">
+        #container {
+            width: 800px;
+            margin: 0px auto;
+        }
+        #pong_canvas {
+            background: #000;
+        }
+    </style>
+    <script type="text/javascript" src="Configuration.js"></script>
+    <script type="text/javascript" src="StartScreen.js"></script>
+    <script type="text/javascript" src="Rectangle.js"></script>
+    <script type="text/javascript" src="Paddle.js"></script>
+    <script type="text/javascript" src="Ball.js"></script>
+    <script type="text/javascript" src="Scoreboard.js"></script>
+    <script type="text/javascript" src="CollisionDetector.js"></script>
+    <script type="text/javascript" src="ComputerAI.js"></script>
+    <script type="text/javascript" src="Game.js"></script>
+    <script type="text/javascript">
+    window.onload = function() {
+        var canvas = document.getElementById("pong_canvas");
+        var context = canvas.getContext("2d");
+        var pongGame = new Pong.Game(context);
+        pongGame.init();
+    };
+    </script>
+</head>
+<body>
+    <div id="container">
+        <canvas id="pong_canvas" width="800" height="600">
+        Error: Browser does not support canvas element.
+        </canvas>
+    </div>
+</body>
+</html>
