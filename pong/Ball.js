@@ -23,7 +23,7 @@ Pong.Ball = function(context, ballConfig) {
     this.parent = Pong.Rectangle.prototype;
     this.parent.constructor.call(this, context);
 
-    // Define the properties of the paddle.
+    // Define the properties of the ball.
     this.width = ballConfig.width;
     this.height = ballConfig.height;
     this.posX = ballConfig.posX;
@@ -40,7 +40,7 @@ Pong.Ball = function(context, ballConfig) {
     this.origSpeedY = ballConfig.speedY;
 };
 Pong.Ball.prototype = new Pong.Rectangle(); // inheritance
-Pong.Ball.prototype.constructor = Pong.Paddle; // override constructor
+Pong.Ball.prototype.constructor = Pong.Rectangle; // override constructor
 
 /**
  * @summary Reset the ball.
